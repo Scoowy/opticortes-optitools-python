@@ -31,6 +31,7 @@ class Ui_MainWindow(object):
         self.line.setObjectName("line")
         self.vlyGeneral.addWidget(self.line)
         self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
+        self.tabWidget.setTabsClosable(True)
         self.tabWidget.setObjectName("tabWidget")
         self.tabTools = QtWidgets.QWidget()
         self.tabTools.setObjectName("tabTools")
@@ -99,8 +100,8 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "OptiUitls - OptiCortes"))
-        self.label.setText(_translate("MainWindow", "OptiUtils"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "OptiTools - OptiCortes"))
+        self.label.setText(_translate("MainWindow", "OptiTools"))
         self.btnHalfPlank.setText(_translate("MainWindow", "Media plancha"))
         self.btnLineal.setText(_translate("MainWindow", "Metro lineal"))
         self.btnPriceM2.setText(_translate("MainWindow", "Precio m2"))

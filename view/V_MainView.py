@@ -1,12 +1,11 @@
-from PyQt5 import QtGui
 from PyQt5.QtCore import pyqtSlot
-from PyQt5.QtWidgets import QMainWindow, QAction
+from PyQt5.QtWidgets import QMainWindow
 
 from controller.C_MainController import MainController
 from model.M_MainModel import MainModel
 from view.UI_MainView import Ui_MainWindow
 from view.V_DialogAbout import DialogAbout
-from view.V_PriceM2 import PriceM2View
+from view.tabs.V_PriceM2 import PriceM2View
 
 
 class MainView(QMainWindow):

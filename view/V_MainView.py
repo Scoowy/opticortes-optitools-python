@@ -5,6 +5,7 @@ from controller.C_MainController import MainController
 from model.M_MainModel import MainModel
 from view.UI_MainView import Ui_MainWindow
 from view.V_DialogAbout import DialogAbout
+from view.tabs.V_HalfPlank import HalfPlankView
 from view.tabs.V_PriceM2 import PriceM2View
 
 
@@ -28,6 +29,7 @@ class MainView(QMainWindow):
     def connectWithControllers(self):
         # self._ui.btnPriceM2.clicked.connect(self._controller.openPriceM2Tab)
         self._ui.btnPriceM2.clicked.connect(self.openPriceM2View)
+        self._ui.btnHalfPlank.clicked.connect(self.openHalfPlankView)
 
         # self._ui.mActM2.triggered[QAction].connect(self.openPriceM2View)
         self._ui.mActM2.triggered.connect(self.openPriceM2View)
@@ -41,6 +43,13 @@ class MainView(QMainWindow):
         print("Correcto")
         priceM2Tab = PriceM2View()
         self._ui.tabWidget.addTab(priceM2Tab, "Price m2")
+        self._ui.tabWidget.setCurrentIndex(self._ui.tabWidget.count() - 1)
+
+    @pyqtSlot()
+    def openHalfPlankView(self):
+        print("Correcto")
+        halfPlank = HalfPlankView()
+        self._ui.tabWidget.addTab(halfPlank, "Half plank")
         self._ui.tabWidget.setCurrentIndex(self._ui.tabWidget.count() - 1)
 
     @pyqtSlot()

@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QWidget
 
 from controller.tabs.C_PriceM2Controller import PriceM2Controller
 from model.tabs.M_PriceM2Controller import PriceM2Model
-from view.UI_PriceM2View import Ui_tabPriceM2
+from view.tabs.UI_PriceM2View import Ui_tabPriceM2
 
 
 class PriceM2View(QWidget):

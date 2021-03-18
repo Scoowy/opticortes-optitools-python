@@ -46,4 +46,4 @@ class HalfPlankView(QWidget):
     @pyqtSlot(float)
     def onPvpChanged(self, value: float) -> None:
         print(value)
-        self._ui.lcdPVP.display("{:.2f}".format(value))
+        self._ui.lcdPVP.display("{:.4f}".format(value))

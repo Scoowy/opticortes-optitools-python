@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>tabHalfPlank</class>
+ <widget class="QWidget" name="tabHalfPlank">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -60,8 +60,11 @@
         <property name="prefix">
          <string>$ </string>
         </property>
+        <property name="decimals">
+         <number>4</number>
+        </property>
         <property name="maximum">
-         <double>300.000000000000000</double>
+         <double>999.000000000000000</double>
         </property>
        </widget>
       </item>
@@ -84,11 +87,11 @@
           <pointsize>12</pointsize>
          </font>
         </property>
-        <property name="suffix">
-         <string> %</string>
+        <property name="prefix">
+         <string>% </string>
         </property>
         <property name="maximum">
-         <double>300.000000000000000</double>
+         <double>100.000000000000000</double>
         </property>
        </widget>
       </item>
@@ -123,8 +126,11 @@
         <property name="prefix">
          <string>$ </string>
         </property>
+        <property name="decimals">
+         <number>4</number>
+        </property>
         <property name="maximum">
-         <double>300.000000000000000</double>
+         <double>999.000000000000000</double>
         </property>
        </widget>
       </item>
@@ -161,6 +167,9 @@
           <width>150</width>
           <height>40</height>
          </size>
+        </property>
+        <property name="digitCount">
+         <number>8</number>
         </property>
         <property name="segmentStyle">
          <enum>QLCDNumber::Flat</enum>

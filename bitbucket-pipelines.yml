@@ -7,25 +7,19 @@ image: python:3.9
 
 pipelines:
   default:
-    - parallel:
-      - step:
-          name: Install libs
-          caches:
-            - pip
-          script:
-            - if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-            - pip install pytest
-            - pytest -v tests/* --junitxml=test-reports/report.xml
-      - step:
-          name: Lint code
-          script:
-            # Enforce style consistency across Python projects https://flake8.pycqa.org/en/latest/manpage.html
-            - pip install flake8
-            - flake8 . --extend-exclude=dist,build --show-source --statistics
-  
+    - step:
+        name: Install libs
+        caches:
+          - pip
+        script:
+          - if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
     - step:
         name: Build app
         deployment: production
         # trigger: manual  # Uncomment to make this a manual deployment.
         script:
           - pyinstaller -y --clean --name OptiTools --noconsole --icon ./imgs/OptiTool-Icon.ico ./AppGraphic.py
+        after-script:
+          - rm OptiTools.spec
+          - rm -r build

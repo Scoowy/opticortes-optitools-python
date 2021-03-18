@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>OptiTool-Icon.png</file>
+    <file>HalfPlankPrice-Icon.png</file>
+    <file>SquareMeterPrice-Icon.png</file>
+  </qresource>
+</RCC>

@@ -1,22 +1,17 @@
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QMainWindow
 
-from controller.C_MainController import MainController
-from model.M_MainModel import MainModel
-from view.UI_MainView import Ui_MainWindow
+from view.dialogs.UI_MainView import Ui_MainWindow
 from view.V_DialogAbout import DialogAbout
 from view.tabs.V_HalfPlank import HalfPlankView
 from view.tabs.V_PriceM2 import PriceM2View
 
 
 class MainView(QMainWindow):
-    def __init__(self, model: MainModel, controller: MainController) -> None:
+    def __init__(self) -> None:
         super().__init__()
 
-        self._model = model
-        self._controller = controller
         self._ui = Ui_MainWindow()
-        # self._ui = Ui_MainWindow(self)
         self._ui.setupUi(self)
 
         self.initializeValues()
@@ -27,7 +22,6 @@ class MainView(QMainWindow):
         pass
 
     def connectWithControllers(self):
-        # self._ui.btnPriceM2.clicked.connect(self._controller.openPriceM2Tab)
         self._ui.btnPriceM2.clicked.connect(self.openPriceM2View)
         self._ui.btnHalfPlank.clicked.connect(self.openHalfPlankView)
 

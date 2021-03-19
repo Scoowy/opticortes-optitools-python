@@ -33,6 +33,7 @@ class MainView(QMainWindow):
 
         # self._ui.mActM2.triggered[QAction].connect(self.openPriceM2View)
         self._ui.mActM2.triggered.connect(self.openPriceM2View)
+        self._ui.mActMedia.triggered.connect(self.openHalfPlankView)
         self._ui.mActAbout.triggered.connect(self.openDialogAbout)
 
         self._ui.tabWidget.tabCloseRequested.connect(self.closeTab)

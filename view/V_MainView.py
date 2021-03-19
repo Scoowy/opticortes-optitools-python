@@ -35,6 +35,8 @@ class MainView(QMainWindow):
         self._ui.mActM2.triggered.connect(self.openPriceM2View)
         self._ui.mActAbout.triggered.connect(self.openDialogAbout)
 
+        self._ui.tabWidget.tabCloseRequested.connect(self.closeTab)
+
     def connectWithModels(self):
         pass
 
@@ -56,3 +58,8 @@ class MainView(QMainWindow):
     def openDialogAbout(self):
         print("About")
         aboutDialog = DialogAbout()
+
+    @pyqtSlot(int)
+    def closeTab(self, tab: int):
+        if tab != 0:
+            self._ui.tabWidget.removeTab(tab)

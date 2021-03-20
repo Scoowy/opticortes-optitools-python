@@ -39,3 +39,5 @@ class MainController(QObject):
     def openAboutDialog(self):
         print("Open Dialog: About")
         aboutDialog = DialogAbout()
+        aboutDialog.setInfo(self._model.version, self._model.author)
+        aboutDialog.exec_()

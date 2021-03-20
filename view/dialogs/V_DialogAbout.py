@@ -9,4 +9,10 @@ class DialogAbout(QDialog):
 
         self._ui = Ui_DialogAbout()
         self._ui.setupUi(self)
-        self.exec_()
+        # self.exec_()
+
+    def setInfo(self, version: str, author: str):
+        versionStr = self._ui.lblVersion.text() + version
+        createdByStr = self._ui.lblCreatedBy.text() + author
+        self._ui.lblVersion.setText(versionStr)
+        self._ui.lblCreatedBy.setText(createdByStr)

@@ -1,5 +1,4 @@
 from PyQt5.QtCore import QObject, pyqtSignal
-from utils.GeometryUtils import calculateSquareMeter
 
 
 class HalfPlankModel(QObject):

@@ -1,4 +1,4 @@
-from PyQt5.QtCore import QObject, pyqtSlot
+from PyQt5.QtCore import QObject
 
 from model.tabs.M_PriceM2Controller import PriceM2Model
 
